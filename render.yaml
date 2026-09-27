@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: flames-game
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --chdir Backend app:app
+    healthCheckPath: /
+    envVars:
+      - key: FIREBASE_PROJECT_ID
+        value: flames-497e4
+      - key: FIREBASE_SERVICE_ACCOUNT_FILE
+        value: /etc/secrets/firebase-service-account.json
