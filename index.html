@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f43f5e">
+    <title>Flames</title>
+    <link rel="stylesheet" href="flames.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar" id="Header">
+            <div class="brand-mark">♥</div>
+            <div>
+                <h1>Flames</h1>
+                <p>Discover the spark between two names</p>
+            </div>
+        </header>
+
+        <main class="content-wrap">
+            <section class="welcome-panel">
+                <span class="tag">Relationship Match</span>
+                <h2>Find your connection</h2>
+                <p>Enter two names and let the FLAMES game reveal the bond between you.</p>
+            </section>
+
+            <section class="form-card" id="body">
+                <form action="flames.html" method="post" id="flamesForm" novalidate>
+                    <div class="field-group">
+                        <label for="name1">Your Name</label>
+                        <input type="text" id="name1" name="name1" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="name2">Partner's Name</label>
+                        <input type="text" id="name2" name="name2" placeholder="Enter partner's name" required>
+                    </div>
+
+                    <button type="submit" class="heart" aria-label="Find relationship">
+                        <span>Find Relationship</span>
+                    </button>
+                </form>
+            </section>
+
+            <section class="result-area" id="resultArea" aria-live="polite" hidden>
+                <div class="result-glow"></div>
+                <p class="result-names" id="resultNames"></p>
+                <p class="result-caption">Your FLAMES result</p>
+                <h2 class="result-value" id="resultValue"></h2>
+                <p class="result-explanation" id="resultExplanation"></p>
+                <p class="result-error" id="resultError" role="alert" hidden></p>
+                <p class="result-save-status" id="resultSaveStatus" aria-live="polite"></p>
+                <p class="result-note">Just a playful game, not a real prediction.</p>
+            </section>
+        </main>
+
+        <footer class="footer" id="footer">
+            <p>© 2024 Flames Game. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="flames.js"></script>
+</body>
+</html>
